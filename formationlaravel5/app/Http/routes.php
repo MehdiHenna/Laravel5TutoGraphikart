@@ -11,22 +11,9 @@
 |
 */
 
-
-
-Route::get('salut', function(){
-	return "salut les gens";
-});
-
-$route = Route::get('salut/{name}-{id}', function($slug, $id){
-	return "Slug: $slug, ID: $id";
-})->where('name', '[a-z0-9/-]+')->where('id', '[0-9]+'); 
-
-
-
 Route::get('/', function () {
     return view('welcome');
 });
-
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +28,4 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['web']], function () {
     //
-
-
 });
